@@ -59,7 +59,7 @@ fun! jukit#kitty#splits#history(...) abort
         let launch_args += ['--type=os-window']
     endif
     let response = call('jukit#kitty#cmd#launch', launch_args)
-
+    sleep 100m
     if type(response) == 7
         call jukit#kitty#cmd#launch(g:jukit_outhist_title, '--keep-focus', '--cwd=' . getcwd())
     endif
