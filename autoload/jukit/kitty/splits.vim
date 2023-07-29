@@ -14,7 +14,11 @@ fun! jukit#kitty#splits#output(...) abort
         let launch_args += ['--type=os-window']
     endif
     call call('jukit#kitty#cmd#launch', launch_args)
-    sleep 1m
+
+    while !jukit#kitty#splits#exists("output")
+        
+    endif
+
     if a:0 > 0
         call jukit#kitty#cmd#send_text(g:jukit_output_title, a:1)
     endif
