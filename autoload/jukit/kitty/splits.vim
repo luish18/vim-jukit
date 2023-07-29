@@ -15,7 +15,7 @@ fun! jukit#kitty#splits#output(...) abort
     endif
     call call('jukit#kitty#cmd#launch', launch_args)
 
-    sleep 1m
+    sleep 10m
 
     if a:0 > 0
         call jukit#kitty#cmd#send_text(g:jukit_output_title, a:1)
