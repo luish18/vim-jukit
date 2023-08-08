@@ -1,8 +1,6 @@
 call jukit#util#md_buffer_vars()
 let s:jukit_textcell_regex = b:jukit_md_start . '\_.{-}' . b:jukit_md_end
 
-echo "oi"
-
 fun! s:copy_output(from_id, to_id) abort
 python3 << EOF
 import vim, os, sys
